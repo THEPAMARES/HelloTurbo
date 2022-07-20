@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Contact' %}
+
+{% block body %}
+
+    <h1>Contact</h1>
+
+    <div id='contact'>
+
+        {{ include('messages/_form.html.twig') }}
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+
+    <script>
+        document.addEventListener("turbo:before-cache", function() {
+            document.querySelectorAll('.alert-success').forEach(el => el.remove())
+            document.querySelectorAll('div#contact form > div > ul').forEach(el => el.remove())
+        });
+    </script>
+{% endblock %}

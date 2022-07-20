@@ -1,0 +1,8 @@
+.turbo-progress-bar {
+    height: 5px;
+    background-color: red;
+}
+
+.alert-success {
+    color: green; font-weight: bold;
+}
